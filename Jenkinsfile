@@ -28,7 +28,7 @@ pipeline {
       parallel {
         stage('deploy') {
           steps {
-            echo 'deploy stage'
+            echo 'deploy stage to dev'
             input(message: 'are u sure', id: '1')
           }
         }
