@@ -42,6 +42,12 @@ pipeline {
       }
     }
 
+    stage('production deploy') {
+      steps {
+        echo 'heelo from prod'
+      }
+    }
+
   }
   environment {
     CHROME_PATH = 'c:/prgrm'
