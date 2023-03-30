@@ -9,7 +9,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('parallel build') {
           steps {
             echo 'echo "build 2"'
           }
