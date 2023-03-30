@@ -25,9 +25,20 @@ pipeline {
     }
 
     stage('deploy') {
-      steps {
-        echo 'deploy stage'
-        input(message: 'are u sure', id: '1')
+      parallel {
+        stage('deploy') {
+          steps {
+            echo 'deploy stage'
+            input(message: 'are u sure', id: '1')
+          }
+        }
+
+        stage('archive') {
+          steps {
+            archiveArtifacts 'artifacts'
+          }
+        }
+
       }
     }
 
