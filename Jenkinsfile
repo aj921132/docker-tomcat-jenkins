@@ -15,6 +15,12 @@ pipeline {
           }
         }
 
+        stage('test') {
+          steps {
+            writeFile(file: 'unittext', text: 'hello frm text')
+          }
+        }
+
       }
     }
 
