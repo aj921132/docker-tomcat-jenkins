@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('build') {
           steps {
-            sh 'echo "hello "'
+            sh 'echo "hello ${CHROME_PATH} "'
           }
         }
 
@@ -42,5 +42,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    CHROME_PATH = 'c:/prgrm'
   }
 }
