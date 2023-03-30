@@ -35,7 +35,7 @@ pipeline {
 
         stage('archive') {
           steps {
-            archiveArtifacts 'artifacts'
+            archiveArtifacts 'unittext'
           }
         }
 
